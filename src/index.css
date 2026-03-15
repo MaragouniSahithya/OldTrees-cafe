@@ -1,0 +1,51 @@
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+@layer base {
+  body {
+    @apply bg-dark text-cream font-sans antialiased selection:bg-gold/30 selection:text-gold-light;
+    overflow-x: hidden;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-dark-light/40 backdrop-blur-md border border-white/10 shadow-xl;
+  }
+  
+  .glass-button {
+    @apply relative overflow-hidden bg-gold text-dark font-semibold px-6 py-3 rounded-full 
+           transition-all duration-300 hover:bg-gold-light hover:shadow-[0_0_20px_rgba(200,135,42,0.4)]
+           hover:-translate-y-0.5 active:translate-y-0;
+  }
+
+  .glass-button-outline {
+    @apply relative overflow-hidden bg-transparent text-cream font-semibold px-6 py-3 rounded-full 
+           border border-white/20 transition-all duration-300 hover:border-gold hover:text-gold
+           hover:bg-gold/5 hover:-translate-y-0.5 active:translate-y-0;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: theme('colors.dark.DEFAULT');
+}
+::-webkit-scrollbar-thumb {
+  background: theme('colors.gold.dark');
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: theme('colors.gold.DEFAULT');
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
