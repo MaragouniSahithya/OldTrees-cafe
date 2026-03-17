@@ -20,13 +20,13 @@
   .glass-button {
     @apply relative overflow-hidden bg-gold text-dark font-semibold px-6 py-3 rounded-full 
            transition-all duration-300 hover:bg-gold-light hover:shadow-[0_0_20px_rgba(200,135,42,0.4)]
-           hover:-translate-y-0.5 active:translate-y-0;
+           hover:-translate-y-0.5 active:translate-y-0 min-h-[44px] active:scale-95;
   }
 
   .glass-button-outline {
     @apply relative overflow-hidden bg-transparent text-cream font-semibold px-6 py-3 rounded-full 
            border border-white/20 transition-all duration-300 hover:border-gold hover:text-gold
-           hover:bg-gold/5 hover:-translate-y-0.5 active:translate-y-0;
+           hover:bg-gold/5 hover:-translate-y-0.5 active:translate-y-0 min-h-[44px] active:scale-95;
   }
 }
 

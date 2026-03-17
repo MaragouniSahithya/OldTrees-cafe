@@ -31,20 +31,22 @@ const About = () => {
             transition={{ duration: 0.8 }}
             className="relative"
           >
-            <div className="relative aspect-[4/5] rounded-3xl overflow-hidden glass-card p-2 shadow-2xl">
-              <img 
-                src="https://lh3.googleusercontent.com/7aa3sC-UeztUV81tzN63vMngxJ0uwmFdpA6FfoOrT8CArj_Csv3EbQhUqYj1RY57TJAg1b2C5fD1wub_vx2eugqAac3SD-uAxMYH2ZdH=w1200-rw" 
-                alt="Old Trees Cafe serene garden ambiance"
-                className="w-full h-full object-cover rounded-[1.25rem] transition-transform duration-700 hover:scale-105"
-                loading="lazy"
-                onError={(e) => { 
-                  e.target.onerror = null;
-                  e.target.src = 'https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?w=800';
-                }}
-              />
+            <div className="relative aspect-[4/5] rounded-3xl glass-card p-2 shadow-2xl">
+              <div className="w-full h-full rounded-[1.25rem] overflow-hidden">
+                <img 
+                  src="https://lh3.googleusercontent.com/7aa3sC-UeztUV81tzN63vMngxJ0uwmFdpA6FfoOrT8CArj_Csv3EbQhUqYj1RY57TJAg1b2C5fD1wub_vx2eugqAac3SD-uAxMYH2ZdH=w1200-rw" 
+                  alt="Old Trees Cafe serene garden ambiance"
+                  className="w-full h-full object-cover rounded-[1.25rem] transition-transform duration-700 hover:scale-105"
+                  loading="lazy"
+                  onError={(e) => { 
+                    e.target.onerror = null;
+                    e.target.src = 'https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?w=800';
+                  }}
+                />
+              </div>
               
               {/* Rating Badges Floating Overlay */}
-              <div className="absolute top-6 -right-6 md:-right-8 flex flex-col gap-4 drop-shadow-2xl z-20">
+              <div className="absolute top-6 -right-2 sm:-right-8 flex flex-col gap-4 drop-shadow-2xl z-20">
                 <div className="bg-cream text-dark p-4 rounded-xl flex items-center gap-3 shadow-[0_8px_30px_rgb(0,0,0,0.4)]">
                   <div className="w-10 h-10 bg-[#4285F4] text-white rounded-full flex items-center justify-center font-bold font-sans">G</div>
                   <div>
